@@ -16,3 +16,11 @@ class ospath:
         if platform=="linux":
             self.envirpath = '/home/jonas/temp/'
         return self.envirpath
+
+    def getDefaultPath(self):
+        self.envirpath = ''
+        if platform=="windows":
+            self.envirpath = 'C:/monitororder/'
+        if platform=="linux":
+            self.envirpath = '/home/jonas/monitororder/'
+        return self.envirpath
