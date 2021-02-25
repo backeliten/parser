@@ -16,7 +16,7 @@ def saveParsed():
     if(var.get() == "1"):
         path_to_pref = filedialog.asksaveasfilename(
             defaultextension='.txt', filetypes=[("txt files", '*.txt')],
-            #initialdir=self.default_path_to_pref,
+            initialdir=intpath.getDefaultPath(),
             title="Choose filename")
         with open(path_to_pref, 'w') as f:
             str = open(intpath.getPath() + 'OrderOut.txt')
@@ -29,7 +29,7 @@ def saveParsed():
     if(var.get() == "3"):
         path_to_pref = filedialog.asksaveasfilename(
             defaultextension='.txt', filetypes=[("txt files", '*.txt')],
-            #initialdir=self.default_path_to_pref,
+            initialdir=intpath.getDefaultPath(),
             title="Choose filename")
         with open(path_to_pref, 'w') as f:
             str = open(intpath.getPath() + 'elektroskandiaout.txt')
@@ -42,7 +42,7 @@ def saveParsed():
     if(var.get() == "4"):
         path_to_pref = filedialog.asksaveasfilename(
             defaultextension='.txt', filetypes=[("txt files", '*.txt')],
-            #initialdir=self.default_path_to_pref,
+            initialdir=intpath.getDefaultPath(),
             title="Choose filename")
         with open(path_to_pref, 'w') as f:
             str = open(intpath.getPath() + 'elfaout.txt')
