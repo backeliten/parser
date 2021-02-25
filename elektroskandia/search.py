@@ -7,7 +7,7 @@ from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 from xml.etree import ElementTree
 from xml.dom import minidom
 
-import xmlwriter
+#import xmlwriter
 import monitorwriter
 
 #string = "Pos:"
