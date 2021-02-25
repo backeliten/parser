@@ -7,7 +7,7 @@ from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 from xml.etree import ElementTree
 from xml.dom import minidom
 
-#import xmlwriter
+import ospath
 
 def printout():
   lines = outputline.split("\n")
@@ -36,11 +36,12 @@ def printout():
   exit()
 
 def run():
+  intpath = ospath.ospath()
   string = "Pos:"
   string2 = "Order"
   foundstart = False
   outputline = ""
-  search = open('C:/temp/temp.txt')
+  search = open(intpath.getPath()+'temp.txt')
   for line in search:
     #re.sub(r'[^' + char +']', '?', line)
   #  print(line)

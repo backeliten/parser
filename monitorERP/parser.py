@@ -1,6 +1,10 @@
 from xml.dom import minidom
+from sys import platform
+
+import ospath
 
 def run(filename):
+    intpath = ospath.ospath()
     xmldoc = minidom.parse(filename)
     item = []
     quant = []
@@ -17,25 +21,24 @@ def run(filename):
             quantitys = s.getElementsByTagName('Quantity')
             #print(quantitys[0].data)
             #for quantity in quantitys:
-            #    print("Heööp")
             for node in quantitys:
                 #print(node.childNodes)
                 cnode = node.childNodes[0]
                 if cnode.nodeType == node.TEXT_NODE:
                     quant.append(cnode.data)
 
-    file = open("C:/Users/backe/temp/elektroskandiaout.txt", 'w')
+    file = open(intpath.getPath() + "elektroskandiaout.txt", 'w')
 
     for a in range(len(item)):
-        print(quant[a]+"\t"+item[a])
+        #print(quant[a]+"\t"+item[a])
         file.write(quant[a]+"\t"+item[a]+"\n\r")
 
     file.close()
 
-    fileelfa = open("C:/Users/backe/temp/elfaout.txt", 'w')
+    fileelfa = open(intpath.getPath() + "elfaout.txt", 'w')
 
     for a in range(len(item)):
-        print(quant[a]+","+item[a])
+        #print(quant[a]+","+item[a])
         fileelfa.write(quant[a]+","+item[a]+"\n\r")
 
     fileelfa.close()
