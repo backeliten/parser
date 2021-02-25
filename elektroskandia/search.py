@@ -7,7 +7,7 @@ from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 from xml.etree import ElementTree
 from xml.dom import minidom
 
-#import xmlwriter
+import ospath
 import monitorwriter
 
 #string = "Pos:"
@@ -17,8 +17,6 @@ import monitorwriter
 #char = '.,/?-abcedefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVXYZ'
 
 #output = open('output.txt', "w")
-
-
 
 # def printout():
 #   lines = outputline.split("\n")
@@ -47,9 +45,10 @@ import monitorwriter
 #   exit()
 
 def run():
+  intpath = ospath.ospath()
   outputline = ""
   string2 = "E "
-  search = open('C:/temp/temp.txt') 
+  search = open(intpath.getPath() + 'temp.txt') 
   for line in search:
     #re.sub(r'[^' + char +']', '?', line)
   #   print(line)
@@ -105,4 +104,4 @@ def run():
 
   #tracker.printout()
 
-  tracker.save("C:/temp/OrderOut.txt")
+  tracker.save(intpath.getPath() + "OrderOut.txt")

@@ -5,12 +5,15 @@ from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from io import BytesIO
 
+import ospath
+
 def pdf_to_text(path):
+    intpath = ospath.ospath()
     encoding = 'utf-8'
     manager = PDFResourceManager()
     #b = bytes()
     #retstr = BytesIO(b)
-    retstr = open("C:/Users/backe/temp/temp.txt", 'w', encoding=encoding)
+    retstr = open(intpath.getPath() + "temp.txt", 'w', encoding=encoding)
     layout = LAParams()
     device = TextConverter(manager, retstr, laparams=layout)
     filepath = open(path, 'rb')
