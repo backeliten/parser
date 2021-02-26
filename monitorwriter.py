@@ -147,7 +147,7 @@ class monitorwriter:
         # objects = objects + "END1\n"
         # #self.outputline = self.outputline + objects
         # #self.outputline = self.outputline + "END1\n"
-        self.maintext = self.renderHead() + self.renderArt() + self.renderTail()
+        self.maintext = self.renderHead() + self.renderArtikel() + self.renderTail()
         text_file = open(filename, "w")
         text_file.write(self.maintext)
         text_file.close()
