@@ -162,9 +162,12 @@ def run():
   outputline = ""
   string2 = "E "
 
-  search = open(intpath.getPath() + 'temp.txt') 
+  search = open(intpath.getPath() + 'temp.txt', encoding='utf8') 
   godsmarke = searchincominggodsmarke(search)
-  #print(godsmarke)
+  print("Godsmärkning")
+  print(godsmarke)
+  if(godsmarke == None):
+    godsmarke = ""
 
   search = open(intpath.getPath() + 'temp.txt') 
   today = searchincomingdate(search)
@@ -251,3 +254,6 @@ def run():
         #print(objarray[i] + "\t"  + datearray[i])
 
   tracker.save(intpath.getPath() + "OrderOut.txt")
+  tracker.empty()       #Clear list to be ready for next
+  objarray.clear()
+  lagerarray.clear()

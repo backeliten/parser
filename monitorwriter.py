@@ -66,7 +66,7 @@ class monitorwriter:
         self.dataarray = []
 
         self.kundkod = ""
-        self.leverantorskod = ""
+        self.leverantorskod = "Empty"
         self.kundensOrdernr = ""
         self.godsmarkning = ""
         self.enhet = "st"
@@ -109,6 +109,11 @@ class monitorwriter:
 
     def renderHead(self):
         header = ""
+        print(self.kundkod)
+        print(self.kundensOrdernr)
+        print(self.godsmarkning)
+        print(self.leverantorskod)
+        #header = header + "HVD1" + "\t" + self.kundkod + "\t" + self.kundensOrdernr + "\t\t\t\t" + self.godsmarkning + "\t\t" + self.leverantorskod + "\n"
         header = header + "HVD1" + "\t" + self.kundkod + "\t" + self.kundensOrdernr + "\t\t\t\t" + self.godsmarkning + "\t\t" + self.leverantorskod + "\n"
         return header
 
@@ -151,3 +156,7 @@ class monitorwriter:
         text_file = open(filename, "w")
         text_file.write(self.maintext)
         text_file.close()
+        
+        
+    def empty(self):
+        self.dataarray = []     #Clear list
