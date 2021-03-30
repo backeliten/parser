@@ -31,5 +31,7 @@ def pdf_to_text(path):
 
 
 #if __name__ == "__main__":
-#    text = pdf_to_text("/home/jonas/git/parsermonitor/Webshop/Bekraftelser/checkup/elektroskandia/0203618.pdf")
-#    print(text)
+#  text = pdf_to_text("/home/jonas/git/parser/0203618.pdf")
+#  text = pdf_to_text("/home/jonas/git/parser/2402090.pdf")
+#  Will print to /home/jonas/temp/temp.txt
+#  print(text)

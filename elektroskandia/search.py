@@ -140,11 +140,21 @@ def searchdate(today):
                 lagerarray.append(lines)
                 
                 var = var + 1
+
+        if "D " in lines:
+            lista = list(lines)
+            print("Found D")
+            print(lines)
+            if(lista[2] != " "):
+                if(lista[2] != "="):
+                    if(lista[0] == "D"):
+                     print("Correct ")
+                     print(lista[2])
+                     print(lines)
+                     lagerarray.append(lines)
+                     datearray.append(today)
+                     var = var + 1
     
-
-
-
-
 def run():
   global alotstrings
   
@@ -235,6 +245,7 @@ def run():
 #     count = count + 1
   print(str(len(objarray)) + "::" + str(len(lagerarray)))
   if(len(objarray) == len(lagerarray)):
+    print("Lev typ is matched, write to array")
     for i in range(len(objarray)):
         tracker.addObjectFull(objarray[i], numarray[i], datearray[i])
         #print(objarray[i] + "\t"  + datearray[i])
